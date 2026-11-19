@@ -7,9 +7,17 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.agropos.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Necesitamos acceso a la cámara para escanear códigos de barras de los productos."
+      }
     },
     "android": {
+      "package": "com.agropos.app",
+      "permissions": [
+        "CAMERA"
+      ],
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -19,6 +27,18 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "629da153-a5bb-4d8c-85e0-7974a8372da7"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/629da153-a5bb-4d8c-85e0-7974a8372da7"
+    },
+    "runtimeVersion": "1.0.0",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
